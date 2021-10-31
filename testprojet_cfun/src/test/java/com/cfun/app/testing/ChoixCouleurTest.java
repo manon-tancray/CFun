@@ -1,6 +1,7 @@
 package com.cfun.app.testing;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import com.cfun.app.ChoixCouleur;
 import com.cfun.app.Couleur;
