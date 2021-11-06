@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.manon.testprojet_cfun.LoginController">
+   <children>
+      <AnchorPane fx:id="login" layoutX="1.0" layoutY="2.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="btn_login" layoutX="240.0" layoutY="294.0" mnemonicParsing="false" onAction="#ShowClientInterface" text="Connexion" />
+            <TextField fx:id="txt_login" layoutX="188.0" layoutY="173.0" promptText="nom d'ut" />
+            <ComboBox fx:id="status" layoutX="199.0" layoutY="105.0" prefWidth="150.0" />
+            <PasswordField layoutX="188.0" layoutY="210.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="choix" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <Button layoutX="413.0" layoutY="188.0" mnemonicParsing="false" onAction="#ShowBillet" text="Fitness" />
+            <Button fx:id="muscu" layoutX="127.0" layoutY="188.0" mnemonicParsing="false" onAction="#ShowBillet" text="Muscu" />
+            <Button fx:id="button_deconnection" layoutX="241.0" layoutY="295.0" mnemonicParsing="false" onAction="#Deconnection" text="Déconnexion" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="billet_entree" layoutY="-8.0" prefHeight="409.0" prefWidth="600.0" visible="false">
+         <children>
+            <TextField editable="false" layoutX="215.0" layoutY="98.0" text="Billet d'entrée n°:" />
+            <Text layoutX="13.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complexe C Fun" textAlignment="CENTER" wrappingWidth="575.7294921875" />
+            <TextField editable="false" layoutX="215.0" layoutY="146.0" text="Date :" />
+            <TextField editable="false" layoutX="215.0" layoutY="191.0" text="Heure :" />
+            <Button fx:id="button_sortie" layoutX="270.0" layoutY="339.0" mnemonicParsing="false" onAction="#ShowBilletSortie" text="Sortie" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="billet_sortie" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <TextField editable="false" layoutX="215.0" layoutY="86.0" text="Billet d'entrée n°:" />
+            <Text layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complexe C Fun" textAlignment="CENTER" wrappingWidth="575.7294921875" />
+            <TextField editable="false" layoutX="215.0" layoutY="129.0" text="Date :" />
+            <TextField editable="false" layoutX="215.0" layoutY="169.0" text="Heure :" />
+            <Button fx:id="boutton_ok" layoutX="272.0" layoutY="323.0" mnemonicParsing="false" onAction="#Sortie" text="ok" />
+            <TextField editable="false" layoutX="214.0" layoutY="208.0" text="Montant :" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
