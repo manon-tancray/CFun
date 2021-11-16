@@ -11,10 +11,10 @@
    <children>
       <AnchorPane fx:id="login" layoutX="1.0" layoutY="2.0" prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Button fx:id="btn_login" layoutX="240.0" layoutY="294.0" mnemonicParsing="false" onAction="#ShowClientInterface" text="Connexion" />
+            <Button fx:id="btn_login" layoutX="240.0" layoutY="294.0" mnemonicParsing="false" onAction="#Login" text="Connexion" />
             <TextField fx:id="txt_login" layoutX="188.0" layoutY="173.0" promptText="nom d'ut" />
             <ComboBox fx:id="status" layoutX="199.0" layoutY="105.0" prefWidth="150.0" />
-            <PasswordField layoutX="188.0" layoutY="210.0" />
+            <PasswordField fx:id="mdp" layoutX="188.0" layoutY="210.0" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="choix" prefHeight="400.0" prefWidth="600.0" visible="false">
@@ -26,21 +26,21 @@
       </AnchorPane>
       <AnchorPane fx:id="billet_entree" layoutY="-8.0" prefHeight="409.0" prefWidth="600.0" visible="false">
          <children>
-            <TextField editable="false" layoutX="215.0" layoutY="98.0" text="Billet d'entrée n°:" />
+            <TextField fx:id="num_entree" editable="false" layoutX="215.0" layoutY="98.0" text="Billet d'entrée n°:" />
             <Text layoutX="13.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complexe C Fun" textAlignment="CENTER" wrappingWidth="575.7294921875" />
-            <TextField editable="false" layoutX="215.0" layoutY="146.0" text="Date :" />
-            <TextField editable="false" layoutX="215.0" layoutY="191.0" text="Heure :" />
+            <TextField fx:id="date" editable="false" layoutX="215.0" layoutY="146.0" text="Date :" />
+            <TextField fx:id="heure" editable="false" layoutX="215.0" layoutY="191.0" text="Heure :" />
             <Button fx:id="button_sortie" layoutX="270.0" layoutY="339.0" mnemonicParsing="false" onAction="#ShowBilletSortie" text="Sortie" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="billet_sortie" prefHeight="400.0" prefWidth="600.0" visible="false">
          <children>
-            <TextField editable="false" layoutX="215.0" layoutY="86.0" text="Billet d'entrée n°:" />
+            <TextField fx:id="num_sortie" editable="false" layoutX="215.0" layoutY="86.0" text="Billet d'entrée n°:" />
             <Text layoutX="12.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complexe C Fun" textAlignment="CENTER" wrappingWidth="575.7294921875" />
-            <TextField editable="false" layoutX="215.0" layoutY="129.0" text="Date :" />
-            <TextField editable="false" layoutX="215.0" layoutY="169.0" text="Heure :" />
+            <TextField fx:id="date" editable="false" layoutX="215.0" layoutY="129.0" text="Date :" />
+            <TextField fx:id="heure" editable="false" layoutX="215.0" layoutY="169.0" text="Heure :" />
             <Button fx:id="boutton_ok" layoutX="272.0" layoutY="323.0" mnemonicParsing="false" onAction="#Sortie" text="ok" />
-            <TextField editable="false" layoutX="214.0" layoutY="208.0" text="Montant :" />
+            <TextField fx:id="montant" editable="false" layoutX="214.0" layoutY="208.0" text="Montant :" />
          </children>
       </AnchorPane>
    </children>

@@ -35,6 +35,7 @@ public class Arrivee {
 		final String MSGNUM = "Billet d'entrée n° : ";
 		final String MSGDATE = "Date : ";
 		final String MSGHEURE = "Heure : ";
+		final String MSGCOUT = "Montant : ";
 
 		String leBillet;
 		leBillet = MSGNOM + this.getComplexe().getNomComplexe() + "\t";
@@ -66,7 +67,7 @@ public class Arrivee {
 		this.hDep = Calendar.getInstance();
 		
 		//on simule ici une sortie 32 mn plus tard
-		hDep.add(Calendar.MINUTE, +32);
+		hDep.add(Calendar.MINUTE, +10);
 		
 		Date laDate = hDep.getTime();
 		SimpleDateFormat leJour = new SimpleDateFormat("dd/MM/yyyy");
@@ -91,7 +92,9 @@ public class Arrivee {
 			if (duree <= 30 && duree > 15) {
 				cout = 0.5;
 			} else {
-				if (duree < 60) {
+				if (duree < 15) {
+					cout = 0;
+				} else if (duree < 60) {
 					cout = 1;
 				} else {
 					// cout fixe d'une heure

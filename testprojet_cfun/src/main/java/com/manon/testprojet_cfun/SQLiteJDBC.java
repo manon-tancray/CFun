@@ -2,11 +2,16 @@ package com.manon.testprojet_cfun;
 
 import java.sql.*;
 
+/**
+ * @author manon
+ *
+ */
 public class SQLiteJDBC {
   public static void main( String args[] ) {
       Connection c = null;
       Statement stmt = null;
       
+/*connection application*/      
       try {
          Class.forName("org.sqlite.JDBC");
          c = DriverManager.getConnection("jdbc:sqlite:test.db");
