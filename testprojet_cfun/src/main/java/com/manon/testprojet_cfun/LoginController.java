@@ -3,6 +3,7 @@ package com.manon.testprojet_cfun;
 import java.net.URL;
 
 
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,11 +12,16 @@ import javax.swing.JOptionPane;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 /**
@@ -96,9 +102,19 @@ private void Login (ActionEvent event) throws Exception {
 		pst.setString(3, status.getValue().toString());
 		rs = pst.executeQuery();
 		if(rs.next()) {
-			JOptionPane.showMessageDialog(null, "Nom d'utilisateur et mot de passe correct");
-			 login.setVisible(false);
-			 choix.setVisible(true);
+			if (status.getValue().toString() == "Client") {
+				JOptionPane.showMessageDialog(null, "Nom d'utilisateur et mot de passe correct");
+				login.setVisible(false);
+				choix.setVisible(true);
+			}
+			else {
+				login.getScene().getWindow().hide();
+				Parent root = FXMLLoader.load(getClass().getResource("gestionnaire.fxml"));
+				Stage mainStage = new Stage();
+				Scene scene = new Scene(root);
+				mainStage.setScene(scene);
+				mainStage.show();
+			}
 		}
 		else 
 			JOptionPane.showMessageDialog(null, "Nom d'utilisateur et mot de passe incorrect");
